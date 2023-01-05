@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>TFS</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" th:href="@{css/responsive.css}" href="../static/css/responsive.css">
+    <!-- fevicon -->
+    <!--<link rel="icon" href="images/fevicon.png" type="image/gif" />-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" th:href="@{/css/jquery.mCustomScrollbar.min.css}" href="../static/css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesoeet" th:href="@{/css/owl.carousel.min.css}" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="icon" href="../static/img/icon.png" th:href="@{/img/icon.png}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/searchPage.css}" href="../static/css/searchPage.css">
+
+</head>
+<body id="style-1">
+
+<div class="box_main_2" style="height: 150px;">
+    <div class="row" style="margin-left: 10%; margin-right: 0px;">
+        <div class="row1" style="width: 10%">
+            <img th:src="@{/img/mydesign.png}" src="../static/img/mydesign.png" style="height: 60%; margin-left: -45%;">
+        </div>
+        <div class="row2" style="width: 85%; margin-top: 45px; margin-left: 5%;">
+            <form href="#" th:action="@{/post}" method="post" class="searchBar" style="border: solid;">
+                <a href="#" id="searchBtn">
+                    <img src="../static/img/picwish.png" th:src="@{/img/picwish.png}" id="search-img">
+                </a>
+                <input type="text" class="awesomplete email_bt" th:value="${input}" name="keyword" data-minchars="1" data-list="#predict-list" data-maxitems="6" autocomplete="off">
+                <img id="bird-img" src="../static/img/鳥2.gif" th:src="@{/img/鳥2.gif}">
+<!--                <input id="file" type="file" name=""><label for="file">-->
+                <img id="file-img" src="../static/img/google-plus-party-mode.png" th:src="@{/img/google-plus-party-mode.png}"></i>
+                <datalist id="predict-list">
+                    <option>熱狗</option>
+                    <option>熱巴</option>
+                    <option>蛋堡</option>
+                    <option>茄子蛋</option>
+                    <option>蛋頭</option>
+                    <option>菜頭</option>
+                    <option>胡瓜</option>
+                    <option>菜阿嘎</option>
+                    <option>納豆</option>
+                    <option>豆花妹</option>
+                    <option>雞排妹</option>
+                    <option>奶茶妹</option>
+                    <option>王子</option>
+                    <option>老皮</option>
+                    <option>老高</option>
+                    <option>焦糖哥哥</option>
+                    <option>蕫哥</option>
+                    <option>李友廷</option>
+                    <option>李英宏</option>
+                    <option>李權哲</option>
+                    <option>李榮浩</option>
+                    <option>李毓芬</option>
+                    <option>Mande</option>
+                    <option>Reatia</option>
+                    <option>Sweet John</option>
+                    <option>davie504</option>
+                    <option>braces163</option>
+                    <option>Manny Khoshbin</option>
+                    <option>Sungha Jung</option>
+                    <option>Chillseph</option>
+                    <option>Marry See The Future</option>
+                    <option>Ado</option>
+                    <option>Trash</option>
+                    <option>Yoasobi</option>
+                    <option>deca joins</option>
+                    <option>VanossGaming</option>
+                    <option>Ozi</option>
+                    <option>ImperiaHal</option>
+                    <option>Genburten</option>
+                    <option>Mande</option>
+                    <option>Polyphia</option>
+                    <option>Depapepe</option>
+                    <option>John Mayer</option>
+                    <option>Vast & Hazy</option>
+                    <option>Penthouse</option>
+                    <option>林宥嘉</option>
+                    <option>林俊傑</option>
+                    <option>林允儿</option>
+                </datalist>
+            </form>
+        </div>
+    </div>
+</div>
+<div style=" margin-left: 20%; margin-right: 7%;">
+    全部
+</div>
+<!--<p class="dummy_text">-->
+<!--<h1 class="jobs_text">-->
+<hr color="black">
+<!--<p class="dummy_text">-->
+<!--<h1 class="jobs_text">-->
+<div th:each="pa:${page}" style="margin-left: 20%; margin-right: 7%;">
+    <p class="dummy_text" th:text="${pa.url}">
+    <h1><a href="#" th:text="${pa.title}" th:href="@{${pa.url}}">title</a></h1>
+    <span class="dummy_text" th:text="${pa.description}">des</span>
+</div>
+<div class="blank"></div>
+<div class="resultContainer">
+    <a href="#" th:href="@{/nextPage(page=${page.number}-1)}" th:unless="${page.first}" class="button-17">上一頁</a>
+    <a href="#" th:href="@{/nextPage(page=${page.number}+1)}" th:unless="${page.last}" class="button-17">下一頁</a>
+</div>
+
+
+<script th:src="@{/js/jquery.min.js}" src="../static/js/jquery.min.js"></script>
+<script th:src="@{/js/popper.min.js}" src="../static/js/popper.min.js"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}" src="../static/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/jquery-3.0.0.min.js}" src="../static/js/jquery-3.0.0.min.js"></script>
+<script th:src="@{/js/plugin.js}" src="../static/js/plugin.js"></script>
+<!-- sidebar -->
+<script th:src="@{/js/jquery.mCustomScrollbar.concat.min.js}" src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script th:src="@{/js/custom.js}" src="../static/js/custom.js"></script>
+<!-- javascript -->
+<script th:src="@{/js/owl.carousel.js}" src="../static/js/owl.carousel.js"></script>
+<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+<script th:inline="javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            openEffect: "none",
+            closeEffect: "none"
+        });
+    })
+</script>
+<script src="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.min.js"></script>
+</body>
+</html>

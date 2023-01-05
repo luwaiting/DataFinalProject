@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>id</td>-->
+<!--        <td>name</td>-->
+<!--        <td>author</td>-->
+<!--        <td>price</td>-->
+<!--        <td>status</td>-->
+<!--    </tr>-->
+<!--    <tr th:each="book,iterStat:${page.content}">-->
+<!--        <td th:text="${iterStat.count}">id</td>-->
+<!--        <td th:text="${book.name}">name</td>-->
+<!--        <td th:text="${book.author}">author</td>-->
+<!--        <td th:text="${book.price}">price</td>-->
+<!--        <td th:text="${book.status}">status</td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+
+
+<div th:each="book,iterStat:${page.content}">
+    <span th:text="${iterStat.count}">id</span>
+    <span th:text="${book.name}">name</span>
+    <span th:text="${book.author}">a</span>
+    <span th:text="${book.price}">p</span>
+    <span th:text="${book.status}">s</span>
+</div>
+<nav>
+    <ul class="pager">
+        <li class="previous"><a href="#" th:href="@{/tryDividePage(page=${page.number}-1)}" th:if="${page.first}!=true">上一頁</a></li>
+        <li class="next"><a href="#" th:href="@{/tryDividePage(page=${page.number}+1)}" th:if="${page.last}!=true">下一頁</a></li>
+    </ul>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+<!--    <link rel="stylesheet" th:href="@{/css/awesomplete.css}" href="../static/css/awesomplete.css" />-->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.css">
+<!--    thymeleaf的模板下要這樣才能連上（只要是靜態資源就要這樣引入）-->
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="width: auto">
+    <form href="#" th:action="@{/first}" method="post">
+        <label for="textId">輸入</label>
+        <input type="text" name="textValue" id="textId" class="awesomplete" data-minchars="1" data-list="#languages-list">
+
+        <datalist id="languages-list">
+            <option>熱狗</option>
+            <option>蛋堡</option>
+            <option>林宥嘉</option>
+            <option>林俊傑</option>
+            <option>林允儿</option>
+            <option>林老師</option>
+            <option>林祖媽</option>
+            <option>林北</option>
+            <option>林好</option>
+            <option>C#</option>
+            <option>Java</option>
+            <option>PHP</option>
+            <option>Ruby</option>
+            <option>Python</option>
+        </datalist>
+        <button type="submit" name="submit" value="value" class="button">發送</button>
+<!--        <p class="text-center">-->
+<!--          <a href="tryJump.html" th:href="@{/jump}" class="btn-primary">傳送</a>-->
+<!--        </p>-->
+    </form>
+</div>
+
+<!--<script th:inline="javascript">-->
+<!--    -->
+<!--     const input = document.getElementById("textId");-->
+<!--     const awesomplete = new Awesomplete(input);-->
+<!--     awesomplete.list=["Ada", "Java", "JavaScript", "Brainfuck", "LOLCODE", "Node.js", "Ruby on Rails"];-->
+<!--</script>-->
+
+
+
+
+<!--<p>Hello!</p>-->
+<!--<p class="text-center">&ndash;&gt;-->
+<!--    <a href="tryGet.html" th:href="@{/get1}" class="btn-primary">get1</a>-->
+<!--</p>-->
+<!--<p class="text-right">&ndash;&gt;-->
+<!--    <a href="tryGet2.html" th:href="@{/get2}" class="btn-primary">get2</a>-->
+<!--</p>-->
+
+<!--網路資源所以不用透過thymeleaf就可-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script th:src="@{/js/bootstrap.min.js}" src="../static/js/bootstrap.min.js"></script>
+<!--<script th:src="@{/js/awesomplete.js}" src="../static/js/awesomplete.js" async></script>-->
+<script src="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.min.js"></script>
+</body>
+</html>

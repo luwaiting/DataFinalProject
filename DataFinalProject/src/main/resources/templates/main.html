@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- mobile metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<!-- site metas -->
+	<title>TFS</title>
+	<!-- bootstrap css -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" href="../static/css/bootstrap.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" href="../static/css/style.css">
+	<!-- Responsive-->
+	<link rel="stylesheet" th:href="@{css/responsive.css}" href="../static/css/responsive.css">
+	<!-- fevicon -->
+	<!--<link rel="icon" href="images/fevicon.png" type="image/gif" />-->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.css">
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" th:href="@{/css/jquery.mCustomScrollbar.min.css}"
+		  href="../static/css/jquery.mCustomScrollbar.min.css">
+	<!-- Tweaks for older IEs-->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+	<link rel="icon" href="../static/img/icon.png" th:href="@{/img/icon.png}" type="image/x-icon">
+	<link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}" href="../static/css/owl.carousel.min.css">
+	<link rel="stylesoeet" th:href="@{/css/owl.carousel.min.css}" href="../static/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+		  media="screen">
+	<link rel="stylesheet" type="text/css" th:href="@{/css/searchPage.css}" href="../static/css/searchPage.css">
+</head>
+<body id="style-1">
+	<!-- header section start-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="logo" href="#"><img th:src="@{/img/mydesign.png}" src="../static/img/mydesign.png" style="height: 50px;"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav" style="justify-content: right;">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="about.html" th:href="@{/aboutPage}">ABOUT US</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" th:href="@{/recordPage}">SEARCH RECORD</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<!-- header section start-->
+	<!-- banner section start-->
+	<div class="banner_section layout_padding">
+		<div class="container">
+			<h1 class="best_taital">FamousS</h1>
+			<div class="box_main" style="width: 70%;">
+				<form href="#" th:action="@{/post}" method="post" class="searchBar">
+					<a href="#" id="searchBtn">
+						<img src="../static/img/picwish.png" th:src="@{/img/picwish.png}" id="search-img">
+					</a>
+					<input type="text" class="awesomplete email_bt" placeholder="search" name="keyword" data-minchars="1" data-list="#predict-list" data-maxitems="6" autocomplete="off">
+					<img id="bird-img" src="../static/img/鳥2.gif" th:src="@{/img/鳥2.gif}">
+
+					<!--<input type="text" class="awesomplete email_bt" placeholder="Search" name="keyword" data-minchars="1" data-list="#predict-list">
+					<button class="subscribe_bt"><a href="#">Send</a></button>-->
+					<!--					<button class="subscribe_bt_2"><a href="#">Send</a></button>-->
+					<datalist id="predict-list">
+						<option>迪麗熱巴</option>
+						<option>熱狗</option>
+						<option>蛋堡</option>
+						<option>茄子蛋</option>
+						<option>蛋頭</option>
+						<option>菜頭</option>
+						<option>胡瓜</option>
+						<option>菜阿嘎</option>
+						<option>納豆</option>
+						<option>豆花妹</option>
+						<option>雞排妹</option>
+						<option>奶茶妹</option>
+						<option>王子</option>
+						<option>老皮</option>
+						<option>老高</option>
+						<option>焦糖哥哥</option>
+						<option>蕫哥</option>
+						<option>李友廷</option>
+						<option>李英宏</option>
+						<option>李權哲</option>
+						<option>李榮浩</option>
+						<option>李毓芬</option>
+						<option>Mande</option>
+						<option>Reatia</option>
+						<option>Sweet John</option>
+						<option>davie504</option>
+						<option>braces163</option>
+						<option>Manny Khoshbin</option>
+						<option>Sungha Jung</option>
+						<option>Chillseph</option>
+						<option>Marry See The Future</option>
+						<option>Ado</option>
+						<option>Trash</option>
+						<option>Yoasobi</option>
+						<option>deca joins</option>
+						<option>VanossGaming</option>
+						<option>Ozi</option>
+						<option>ImperiaHal</option>
+						<option>Genburten</option>
+						<option>Mande</option>
+						<option>Polyphia</option>
+						<option>Depapepe</option>
+						<option>John Mayer</option>
+						<option>Vast & Hazy</option>
+						<option>Penthouse</option>
+						<option>林宥嘉</option>
+						<option>林俊傑</option>
+						<option>林允儿</option>
+					</datalist>
+				</form>
+<!--				<input id="file" type="file" name="">-->
+<!--				<label for="file"><img id="file-img" src="../static/img/google-plus-party-mode.png" th:src="@{/img/google-plus-party-mode.png}"></i></label>-->
+<!--				<form href="#" th:action="@{/profilePhotoUpload}" method="post"  enctype="multipart/form-data">-->
+<!--					<input class="btn-info" id="file" type="file" name="file" onchange="upImg()" i value="提交"
+					style="width: 80%;">-->
+<!--					<label for="file"><img id="file-img" src="../static/img/google-plus-party-mode.png" th:src="@{/img/google-plus-party-mode.png}" type="submit" ></i></label>-->
+<!--					<input class="btn-info" type="submit" i value="提交" onclick="file.click()" />-->
+<!--					<div id="camera" style="margin-left: 30%">-->
+<!--						<input id="imgFile" name="file" type="file"   style="display: inline" onchange="upImg()"/>-->
+<!--						<input class="btn-info" type="submit" i value="提交" onclick="file.click()" />-->
+<!--					</div>-->
+<!--				</form>-->
+			</div>
+			<form href="#" th:action="@{/profilePhotoUpload}" method="post"  enctype="multipart/form-data">
+				<div class="fileContainter">
+					<div class="fileRight" style="width: 47%; float: left; margin-top: 20px"><hr color="black"> </div>
+					<div class="fileMiddle" style="width: 6%; float: left">or</div>
+					<div class="fileLeft" style="width: 47%; float: left; margin-top: 20px"><hr color="black"></div>
+					<div class="fileImage">
+						<img id="file-img" src="../static/img/google-plus-party-mode.png" th:src="@{/img/google-plus-party-mode.png}" style="height: 35px" ></i>
+						<input class="btn-info" id="file" type="file" name="file" onchange="upImg()" i value="提交"
+							   style="width: 20%; background: none; margin-top: 10px">
+						<input class="btn-info" type="submit" i value="提交" style="height: 40px; margin-top: 7px"/>
+					</div>
+				</div>
+			</form>
+			<!--		    <div class="bt_main">-->
+			<!--		    	<div class="discover_bt"><a href="#">Discover More</a></div>-->
+			<!--		    </div>-->
+		</div>
+	</div>
+	<!-- banner section end-->
+	<!-- marketing section start-->
+	<div class="marketing_section layout_padding">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="job_section">
+						<!--						技術-->
+						<h1 class="jobs_text">What do we use</h1>
+						<p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+						<!--<div class="apply_bt"><a href="#">Try now</a></div>-->
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="image_1 padding_0">
+						<img src="../static/img/tech2.png" th:src="@{/img/tech2.png}">
+						<img src="../static/img/tech1.png" th:src="@{/img/tech1.png}">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- marketing section end-->
+	<!-- Industrial section start-->
+	<div class="marketing_section layout_padding">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="image_1 padding_0">
+						<img src="../static/img/java.png" th:src="@{/img/java.png}">
+						<img src="../static/img/html.png" th:src="@{/img/html.png}">
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="job_section_2">
+						<h1 class="jobs_text">What we learn</h1>
+						<p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+						<!--<div class="apply_bt"><a href="#">Try now</a></div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Industrial section end-->
+	<!-- Corporate section start-->
+	<div class="marketing_section layout_padding">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="job_section">
+						<h1 class="jobs_text">What have we got in this course</h1>
+						<p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+						<!--<div class="apply_bt"><a href="#">Try now</a></div>-->
+					</div>
+				</div>
+				<div class="col-md-6 padding_0">
+					<div class="image_1"><img src="../static/img/get.png" th:src="@{/img/get.png}" style="width: 30%; margin-left: 10%;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Corporate section end-->
+	<!-- Government section start-->
+	<div class="marketing_section layout_padding">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6 padding_0">
+					<div class="image_1">
+						<img src="../static/img/fang.png" th:src="@{/img/fang.png}" style="width: 15%; margin-left: 40%;">
+						<img src="../static/img/soslab.png" th:src="@{/img/soslab.png}" style="width: 20%; margin-left: 5%;">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="job_section_2">
+						<h1 class="jobs_text">Dear Fang Yu Professor</h1>
+						<p class="dummy_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there</p>
+						<a href="http://soslab.nccu.edu.tw/Welcome.html">SoSLab</a>
+						<!--<div class="apply_bt"><a href="#">Try now</a></div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Government section end-->
+	<!-- footer section start-->
+	<!--	<div class="footer_section layout_padding">-->
+	<!--		<div class="container">-->
+	<!--			<h1 class="subscribr_text">Subscribe Now</h1>-->
+	<!--			<p class="lorem_text">There are many variations of passages of Lorem Ipsum available, but the majority have </p>-->
+	<!--			<div class="box_main_2">-->
+	<!--			    <textarea type="" class="email_bt_2" placeholder="Enter Your Email" name=""></textarea>-->
+	<!--		    </div>-->
+	<!--		    <button class="subscribe_bt_2"><a href="#">Subscribe</a></button>-->
+	<!--		</div>-->
+	<!--	</div>-->
+	<!-- footer section end-->
+	<!-- copyright section start-->
+	<div class="copyright_section" style="margin-top: 10px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p class="copyright_text">Copyright 2022 All Right Reserved By Group</p>
+				</div>
+				<div class="col-md-6">
+					<p class="cookies_text">Cookies, Privacy and Terms</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- copyright section end-->
+
+
+	<!-- Javascript files-->
+<!--	<script th:src="@{/js/forVision.js}" src="../static/js/forVision.js"></script>-->
+	<script th:src="@{/js/jquery.min.js}" src="../static/js/jquery.min.js"></script>
+	<script th:src="@{/js/popper.min.js}" src="../static/js/popper.min.js"></script>
+	<script th:src="@{/js/bootstrap.bundle.min.js}" src="../static/js/bootstrap.bundle.min.js"></script>
+	<script th:src="@{/js/jquery-3.0.0.min.js}" src="../static/js/jquery-3.0.0.min.js"></script>
+	<script th:src="@{/js/plugin.js}" src="../static/js/plugin.js"></script>
+	<!-- sidebar -->
+	<script th:src="@{/js/jquery.mCustomScrollbar.concat.min.js}" src="../static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script th:src="@{/js/custom.js}" src="../static/js/custom.js"></script>
+	<!-- javascript -->
+	<script th:src="@{/js/owl.carousel.js}" src="../static/js/owl.carousel.js"></script>
+	<script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+	<script th:inline="javascript">
+		$(document).ready(function() {
+			$(".fancybox").fancybox({
+				openEffect: "none",
+				closeEffect: "none"
+			});
+		})
+	</script>
+	<script src="https://cdn.rawgit.com/Leaverou/awesomplete/gh-pages/awesomplete.min.js"></script>
+</body>
+</html>

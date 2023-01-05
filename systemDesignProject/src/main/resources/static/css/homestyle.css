@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Noto+Sans+TC:wght@500&display=swap');
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+*{
+    font-family: 'Poppins', cursive,'Noto Sans TC';
+    font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;
+    box-sizing: border-box;
+}
+body, html {
+    overflow-x: hidden;
+}
+.navtext{
+    text-decoration: aliceblue;
+}
+.bcolor{
+    color: rgb(13, 1, 1);
+    margin-right: 2px;
+    padding-top: 5px;
+}
+
+header{
+    width: 100%;
+    padding: 130px 0;
+    background:linear-gradient(rgba(138, 223, 248, 0.315),rgba(250, 76, 53, 0.274)),url(../image/e1.jpg);
+    background-size: cover;
+    background-position:center;
+    color: rgba(255, 255, 255, 0.979);
+}
+
+
+.head-title{
+    font-size: 70px;
+    text-shadow:8px 5px 2px rgba(0, 0, 0, 0.74);
+}
+
+.sub-title{
+    font-size: 25px;
+    text-shadow:3px 3px 2px rgba(0, 0, 0, 0.568);
+}
+
+.photo1{
+    box-shadow: 10px 6px 5px rgba(78, 82, 80, 0.411);
+    transition: all .3s ease;
+}
+
+.photo1:hover{
+    box-shadow: 30px 18px 7px rgba(24, 26, 25, 0.411);
+    border: 2px solid rgba(51, 28, 21, 0.74);
+}
+/* 上方留白 */
+.place{
+    margin-top: 30px;
+}
+.pl{
+    text-align: left;
+}
+/* 下方留白 */
+.down{
+    margin-bottom: 100px;
+}
+
+/* About Series 的字換顏色 */
+.text-colour{
+    color: rgba(11, 9, 1, 0.952);
+}
+
+
+.place1{
+    color: rgb(11, 10, 3);
+    margin-top:0;
+    margin-bottom: 0;
+    padding-top: 80px;
+}
+
+/* card */
+
+.background{
+    background-color: rgb(250, 247, 252);
+    background-color: rgb(0, 48, 96);
+    background-color: rgb(147, 0, 147);
+    background-color: rgb(47, 79, 79);
+    background-color: rgb(247, 174, 115);
+    background-color: rgb(136, 136, 136);
+    background-color: rgb(16, 76, 136);
+}
+
+.card-lister {
+    margin-top: 0px;
+    /* margin-bottom: 50px; */
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.mycard {
+    background-color: rgb(128, 121, 108);
+    color: white; 
+    width : 300px;
+    margin: 60px 25px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.616);
+    transition: all .3s ease;
+    border-radius: 18px;
+    border: 2px solid rgba(17, 2, 20, 0.678);
+    overflow: hidden;
+    position: relative;
+    bottom: 0; 
+}
+.input-back{
+    background-color: rgb(226, 226, 226);
+    opacity: 1;
+    border: none;
+    border-radius: 15px;
+
+}
+
+.mycard:hover{
+    background-color: rgb(247, 241, 233);
+    color: black; 
+    box-shadow: 0px 20px 18px rgba(15, 15, 15, 0.411);
+    border-radius: 25px;
+    /* margin-top: 40px; */
+    bottom: 20px;
+    
+}
+
+.subbtn{
+    background-color: rgb(175, 163, 141);
+    color: rgb(231, 231, 235);
+    border: none;
+    border-radius: 2px;
+    font-size: 8px;
+    
+}
+
+.clearbtn{
+
+    background-color: rgb(175, 163, 141);
+    color: rgb(231, 231, 235);
+    border: none;
+    border-radius: 2px;
+    font-size: 8px;
+}
+
+.wrong{
+    font-size: 10px;
+    text-align:right;
+}
+
+.card-imgg {
+    width : 100%;
+    display: block;
+}
+
+.card-b {
+    /* padding: 上下 左右; */
+    padding: 20px 20px ;
+    
+}
+
+.card-titletitle {
+    margin-top: 0;
+    text-align: center;
+}
+
+.card-textt {
+    margin-bottom: 0;
+}
+
+.button-holder{
+    text-align: center;
+}
+
+.wrong{
+    position:absolute;
+    bottom: 65px;
+    right: 40px;
+    color: aliceblue;
+    
+}
+
+/* card end */
+
+/* 照片 */
+
+[id^='photosImage'] {
+    background-size: cover;
+    height: 250px;
+    display: flex;
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    filter:grayscale(100%);
+    transition: all .5s ease;
+}
+
+[id^='photosImage']>.photos-text {
+    color: white;
+    font-weight: 800;
+    text-shadow: 0px 8px 10px rgba(234, 238, 15, 0.74);
+    text-align: left;
+    transition: all .3s ease;
+}
+
+[id^='photosImage']:hover {
+    filter: grayscale(0%);
+}
+
+[id^='photosImage']:hover>.photos-text {
+    opacity: 0;
+}
+
+#photosImage1 {
+    background-image: url(../image/pexels-zen-chung-5529604.jpg);
+}
+
+#photosImage2 {
+    background-image: url(../image/food.jpg );
+}
+
+#photosImage3 {
+    background-image: url(../image/pexels-erik-scheel-95425.jpg);
+}
+
+#photosImage4 {
+    background-image: url(../image/drink.jpg);
+}
+
+#photosImage5 {
+    background-image: url(../image/green.jpg);
+}
+
+#photosImage6 {
+    background-image: url(../image/m1.jpg);
+}
+
+#photosImage7 {
+    background-image: url(../image/tree.jpg);
+}
+
+#photosImage8 {
+    background-image: url(../image/plant.jpg);
+}
+
+/* 圓形的選擇器 */
+.carousel-indicators li{
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+/* 以下只在視窗寬度小於等於600px時起效 */
+@media(max-width:600px){
+header{
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.979);
+
+}
+
+.head-title{
+    position: relative;
+    top: 150px;
+    margin-left: 0;
+    font-size: 50px;
+    text-shadow:10px 5px 2px rgba(72, 71, 71, 0.842);
+    
+}
+
+.sub-title{
+    position: relative;
+    top: 120px;
+    margin-left: 0;
+    margin-top: 80px;
+    font-size: 30px;
+    text-shadow:3px 3px 2px rgba(248, 247, 247, 0.726);
+}
+
+/* 手機版時名字置中 */
+.place1{
+   text-align: center; 
+}
+
+
+}
+
+.goal{
+    background-image: url(../image/pexels-vedanti-242494.jpg);
+    background-size: cover;
+    background-position:center;
+    opacity: 0.6;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white;
+}
+
+.esg1{
+    background-image: url(../image/pexels-pok-rie-1031200.jpg);
+    background-size: cover;
+    background-position:center;
+    opacity: 0.6;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: white;
+}
+
+.esg2{
+    background-image: url(../image/pexels-min-an-853168.jpg);
+    background-size: cover;
+    background-position:center;
+    opacity: 0.6;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: rgb(251, 247, 247);
+    text-align: center;
+}
+
+.esg3{
+    background-image: url(../image/gp.jpg);
+    background-size: cover;
+    background-position:center;
+    opacity: 0.6;
+    color: white;
+    background-repeat: no-repeat; /* Do not repeat the image */
+
+}
+
+.border-a{
+    border: 3px solid black;
+}
+
+.mycard2 {
+    /* background-color: rgb(15, 14, 14); */
+    color: rgb(0, 0, 0); 
+    width : 300px;
+    height: 220px;
+    margin: 60px 25px;
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.616);
+    transition: all .3s ease;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    position: relative;
+    /* margin-left: 15px; */
+    display: flex;
+    justify-content: left;
+    
+    align-items: left;
+    
+}
+
+.card-a{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex; 
+    justify-content: left;
+    align-items: left;
+}
+.size{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease;
+}
+.btext-style{
+    font-size: 15px;
+    text-align: left;
+    /* padding-right: 30px; */
+    color: rgb(251, 243, 232);
+}
+.ttext-style{
+    font-size: 40px;
+}
+.front{
+    background-color: rgb(215, 219, 250);
+    transform: rotateY(0deg);
+    border-radius: 10px;
+    text-shadow: -2px -2px 0 black
+}
+.back{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(67, 70, 66);
+    border-radius: 10px;
+    transform: rotateY(-180deg);
+
+}
+.card-a:hover .front{
+    transform: rotateY(180deg);
+}
+.card-a:hover .back{
+    transform: rotateY(0deg);
+}
