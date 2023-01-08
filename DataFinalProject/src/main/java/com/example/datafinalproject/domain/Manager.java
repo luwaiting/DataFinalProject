@@ -16,7 +16,9 @@ public class Manager {
         //after getting a urlList from google
         ArrayList<Sorter> eachGooglePageScore = new ArrayList<Sorter>();
         Lists<Keyword> pre = new PresetKeywords();
-        setPreSetKey(pre);
+        if(pre.getList().isEmpty()){
+            setPreSetKey(pre);
+        }
         GetGoogle getGoogle = new GetGoogle(userInputKeyword);
         Map<String, String> googleResult = null;
         googleResult = getGoogle.query();
@@ -110,38 +112,38 @@ public class Manager {
     }
 
     public void setPreSetKey(Lists<Keyword> pre) {
-        pre.add(new Keyword("維基百科", 11));
-        pre.add(new Keyword("網紅", 10));
-        pre.add(new Keyword("明星", 10));
-        pre.add(new Keyword("巨星", 10));
-        pre.add(new Keyword("演員", 10));
-        pre.add(new Keyword("音樂", 10));
+        pre.add(new Keyword("維基百科", 21));
+        pre.add(new Keyword("網紅", 20));
+        pre.add(new Keyword("明星", 20));
+        pre.add(new Keyword("巨星", 20));
+        pre.add(new Keyword("演員", 20));
+        pre.add(new Keyword("音樂", 20));
 //        pre.add(new Keyword("樂曲", 10));
-        pre.add(new Keyword("歌手", 10));
-        pre.add(new Keyword("藝人", 10));
-        pre.add(new Keyword("藝名", 10));
-        pre.add(new Keyword("歌曲", 10));
-        pre.add(new Keyword("歌詞", 10));
-        pre.add(new Keyword("饒舌", 10));
-        pre.add(new Keyword("唱片", 10));
-        pre.add(new Keyword("演藝圈", 10));
-        pre.add(new Keyword("創作", 10));
-        pre.add(new Keyword("金曲獎", 10));
-        pre.add(new Keyword("樂團", 10));
-        pre.add(new Keyword("紅人", 10));
-        pre.add(new Keyword("曲", 10));
-        pre.add(new Keyword("作品", 10));
-        pre.add(new Keyword("樂", 5));
-        pre.add(new Keyword("專輯", 10));
-        pre.add(new Keyword("走紅", 10));
-        pre.add(new Keyword("主持人", 10));
+        pre.add(new Keyword("歌手", 20));
+        pre.add(new Keyword("藝人", 20));
+        pre.add(new Keyword("藝名", 20));
+        pre.add(new Keyword("歌曲", 20));
+        pre.add(new Keyword("歌詞", 30));
+        pre.add(new Keyword("饒舌", 20));
+        pre.add(new Keyword("唱片", 30));
+        pre.add(new Keyword("演藝圈", 30));
+        pre.add(new Keyword("創作", 30));
+        pre.add(new Keyword("金曲獎", 30));
+        pre.add(new Keyword("樂團", 30));
+        pre.add(new Keyword("紅人", 30));
+        pre.add(new Keyword("曲", 30));
+        pre.add(new Keyword("作品", 30));
+        pre.add(new Keyword("樂", 30));
+        pre.add(new Keyword("專輯", 30));
+        pre.add(new Keyword("走紅", 30));
+        pre.add(new Keyword("主持人", 20));
         pre.add(new Keyword("新聞", 5));
         pre.add(new Keyword("實況", 5));
-        pre.add(new Keyword("rapper", 10));
-        pre.add(new Keyword("singer", 10));
+        pre.add(new Keyword("rapper", 20));
+        pre.add(new Keyword("singer", 30));
         pre.add(new Keyword("spotify", 10));
-        pre.add(new Keyword("youtuber", 10));
-        pre.add(new Keyword("music", 10));
+        pre.add(new Keyword("youtuber", 30));
+        pre.add(new Keyword("music", 30));
         //opposite
         pre.add(new Keyword("分手", -1));
         pre.add(new Keyword("官司", -1));
@@ -177,6 +179,9 @@ public class Manager {
         pre.add(new Keyword("販售", 1));
         pre.add(new Keyword("動畫", 1));
         pre.add(new Keyword("運動用品", -2));
+        pre.add(new Keyword("警", -20));
+        pre.add(new Keyword("執勤", -20));
+        pre.add(new Keyword("逮捕", -10));
         pre.add(new Keyword("拍賣", -3));
         pre.add(new Keyword("餐廳", -10));
         pre.add(new Keyword("店家", -10));
@@ -185,7 +190,6 @@ public class Manager {
         pre.add(new Keyword("dictionary", -10));
         pre.add(new Keyword("delete", -10));
         pre.add(new Keyword("environment", -1));
-
 
     }
 
