@@ -10,4 +10,5 @@ public class Record implements Lists<String>{
     public ArrayList<String>getList(){
         return records;
     }
+    public int size(){return records.size();}
 }
