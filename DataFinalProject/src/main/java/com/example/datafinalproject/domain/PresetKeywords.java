@@ -11,4 +11,5 @@ public class PresetKeywords implements Lists<Keyword> {
     public ArrayList<Keyword> getList() {
         return list;
     }
+    public int size(){return list.size();}
 }
