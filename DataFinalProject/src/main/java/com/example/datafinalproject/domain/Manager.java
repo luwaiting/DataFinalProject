@@ -19,6 +19,7 @@ public class Manager {
         if(pre.getList().isEmpty()){
             setPreSetKey(pre);
         }
+//        System.out.println(pre.size());
         GetGoogle getGoogle = new GetGoogle(userInputKeyword);
         Map<String, String> googleResult = null;
         googleResult = getGoogle.query();
@@ -186,10 +187,14 @@ public class Manager {
         pre.add(new Keyword("餐廳", -10));
         pre.add(new Keyword("店家", -10));
         pre.add(new Keyword("店員", -10));
+        pre.add(new Keyword("food", -10));
+        pre.add(new Keyword("delicious", -10));
         pre.add(new Keyword("translation", -10));
+        pre.add(new Keyword("Receipt", -10));
         pre.add(new Keyword("dictionary", -10));
         pre.add(new Keyword("delete", -10));
         pre.add(new Keyword("environment", -1));
+
 
     }
 
