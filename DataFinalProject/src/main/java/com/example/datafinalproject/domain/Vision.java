@@ -104,10 +104,8 @@ public abstract class Vision {
                 key=f.replace(" ","");
                 return getVisionResult(key);
             }else{
-                key=f;
                 return getVisionResult(f);
             }
-
         }
     }
     public abstract ArrayList<Sorter>getVisionResult(String keyword);

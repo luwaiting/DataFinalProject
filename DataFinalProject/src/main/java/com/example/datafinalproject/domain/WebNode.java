@@ -15,6 +15,7 @@ public class WebNode {
     public void setTotalScore(ArrayList<Keyword>keywords)throws IOException {
         web.setScore(keywords);
         totalScore=web.score;
+        //注意可能有錯
         if(!children.isEmpty()){
             for (WebNode c:children){
                 totalScore+=c.totalScore;

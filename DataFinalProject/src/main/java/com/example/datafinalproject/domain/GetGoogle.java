@@ -20,7 +20,8 @@ public class GetGoogle {
 
     public GetGoogle(String searchKeyword) {
         this.searchKeyword = searchKeyword;
-        this.url = "http://www.google.com/search?q=" + searchKeyword + "&oe=utf8&num=40";
+        this.url = String.format("http://www.google.com/search?q=%s&oe=utf8&num=40",searchKeyword);
+//        this.url = "http://www.google.com/search?q=" + searchKeyword + "&oe=utf8&num=40";
     }
 
     private String fetchContent(){
@@ -110,6 +111,8 @@ public class GetGoogle {
             }
 
         }
+
+
 
         return retVal;
     }
